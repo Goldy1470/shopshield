@@ -1,2 +1,18 @@
+# app
+node_modules/
+.next/
+out/
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# misc
+*.log
+.DS_Store
+
 # Hallmark design-process artifacts (logs, shots, probes) stay local
 .hallmark/
