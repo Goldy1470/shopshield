@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShopShield console, on demo data</title>
+<meta name="description" content="The case files, the queue and the month of nights, drawn on demo data. Connect a shop to make it yours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600&family=Wix+Madefor+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="./app.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  </defs>
+</svg>
+
+<header class="bar">
+  <div class="bar__inner">
+    <a class="wordmark" href="./index.html" aria-label="ShopShield, back to the page">ShopShield</a>
+    <span class="bar__scope">Console</span>
+    <div class="bar__shop">Example Ceramics<small>Demo data, not connected</small></div>
+    <a class="abtn abtn--quiet" href="./index.html">Back to the page</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="main">
+    <h1 class="visually-hidden">ShopShield console</h1>
+    <div class="screen" data-state="full">
+
+      <section class="strip" aria-label="A month of nights">
+        <div class="strip__head">
+          <h2>A month of nights</h2>
+          <span>October</span>
+        </div>
+        <div class="strip__bars" role="img" aria-label="Thirty nights watched. The flagged night is the current one, one appeal with you.">
+          <i style="--h:42%"></i><i style="--h:55%"></i><i style="--h:68%"></i><i style="--h:60%"></i><i style="--h:48%"></i><i style="--h:40%"></i><i style="--h:52%"></i><i style="--h:74%"></i><i style="--h:86%"></i><i style="--h:78%"></i><i style="--h:64%"></i><i style="--h:58%"></i><i style="--h:70%"></i><i style="--h:82%"></i><i style="--h:90%"></i><i style="--h:84%"></i><i style="--h:72%"></i><i style="--h:61%"></i><i style="--h:50%"></i><i style="--h:44%"></i><i style="--h:56%"></i><i style="--h:72%"></i><i style="--h:85%"></i><i style="--h:93%"></i><i style="--h:88%"></i><i style="--h:76%"></i><i style="--h:62%"></i><i style="--h:54%"></i><i style="--h:69%"></i><i class="is-open" style="--h:100%"></i>
+        </div>
+        <div class="tally">
+          <div><b>30</b><span>Nights watched</span></div>
+          <div><b>4</b><span>Violations caught</span></div>
+          <div><b>2</b><span>Appeals filed</span></div>
+          <div><b class="is-open">1</b><span>With you now</span></div>
+        </div>
+      </section>
+
+      <div class="cols">
+        <section class="queue" aria-label="The queue">
+          <div class="s-full">
+            <div class="pane__head">
+              <h2>The queue</h2>
+              <span>last four nights</span>
+            </div>
+            <table class="qu">
+              <thead>
+                <tr><th scope="col">Night</th><th scope="col">Type</th><th scope="col">Listing</th><th scope="col">State</th></tr>
+              </thead>
+              <tbody>
+                <tr class="is-open" data-row="open">
+                  <td><time datetime="2026-10-23T02:14">23 Oct 02:14</time></td>
+                  <td>IP claim</td>
+                  <td>0041</td>
+                  <td><span class="st" data-state-cell="open"><svg aria-hidden="true"><use href="#i-check"/></svg>Drafted, with you</span></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-10-23T01:52">23 Oct 01:52</time></td>
+                  <td>Restricted ingredient</td>
+                  <td>0127</td>
+                  <td><span class="st"><svg aria-hidden="true"><use href="#i-check"/></svg>Filed</span></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-10-22T19:30">22 Oct 19:30</time></td>
+                  <td>Late shipment</td>
+                  <td>Thursday batch</td>
+                  <td><span class="st"><svg aria-hidden="true"><use href="#i-check"/></svg>Filed</span></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-10-22T11:08">22 Oct 11:08</time></td>
+                  <td>Cancel-rate warning</td>
+                  <td>account</td>
+                  <td><span class="st"><svg aria-hidden="true"><use href="#i-check"/></svg>Cleared</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="s-loading statepane" aria-live="polite" aria-label="Loading the queue">
+            <h3>Dressing the queue</h3>
+            <div class="sk">
+              <i style="width:82%"></i><i style="width:64%"></i><i style="width:90%"></i><i style="width:70%"></i>
+            </div>
+          </div>
+          <div class="s-empty statepane" aria-live="polite">
+            <h3>Nothing to defend tonight</h3>
+            <p>The watch runs every night. Connect a shop and its violations queue here.</p>
+            <a class="abtn" href="./index.html#connect">Connect a shop</a>
+          </div>
+          <div class="s-error statepane statepane--err" aria-live="polite">
+            <h3>Seller Center is unreachable</h3>
+            <p>The agent retries on its own schedule. Nothing in your shop is touched, and nothing is lost.</p>
+            <a class="abtn abtn--quiet" href="./app.html">Retry from the top</a>
+          </div>
+        </section>
+
+        <aside class="case" aria-label="The case file">
+          <div class="case__head">
+            <h2>Case file, listing 0041</h2>
+            <time datetime="2026-10-22T22:41">drafted 22:41</time>
+          </div>
+          <div class="case__letter" id="letter" tabindex="0">
+            <p>To Seller Support: the listing 0041 carries an <b>IP claim</b>. The design follows the licensed <b>Ceramic Studio template</b>; invoice 4472 and the licence PDF are attached. The original images were taken down the same evening the claim arrived.</p>
+            <p>The shop asks for reinstatement under the marketplace <b>IP policy, appeals section</b>.</p>
+          </div>
+          <p class="cites">Cites the IP policy, appeals; invoice 4472 and the licence PDF.</p>
+          <div class="case__actions" data-actions>
+            <button class="abtn" type="button" data-do="approve">Approve filing</button>
+            <button class="abtn abtn--quiet" type="button" data-do="edit" aria-pressed="false">Edit draft</button>
+            <button class="abtn abtn--quiet" type="button" data-do="reject">Reject</button>
+          </div>
+          <p class="case__note" data-note aria-live="polite">Filing happens on your word, one tap. Nothing sends without you.</p>
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+const screen = document.querySelector('[data-state]');
+const asked = new URLSearchParams(location.search).get('s');
+if (['loading', 'empty', 'error'].includes(asked)) screen.dataset.state = asked;
+
+const openRow = screen.querySelector('[data-row="open"]');
+const openCell = screen.querySelector('[data-state-cell="open"]');
+const actions = screen.querySelector('[data-actions]');
+const note = screen.querySelector('[data-note]');
+const letter = document.getElementById('letter');
+
+screen.querySelector('[data-do="approve"]').addEventListener('click', () => {
+  if (!openRow) return;
+  openRow.classList.remove('is-open');
+  openCell.innerHTML = '<svg aria-hidden="true"><use href="#i-check"/></svg>Filed';
+  note.textContent = 'Filed on your word. The docket keeps the receipt.';
+  actions.hidden = true;
+});
+
+const editBtn = screen.querySelector('[data-do="edit"]');
+editBtn.addEventListener('click', () => {
+  const on = letter.getAttribute('contenteditable') === 'true';
+  letter.setAttribute('contenteditable', on ? 'false' : 'true');
+  editBtn.textContent = on ? 'Edit draft' : 'Done editing';
+  editBtn.setAttribute('aria-pressed', String(!on));
+});
+
+screen.querySelector('[data-do="reject"]').addEventListener('click', () => {
+  if (!openRow) return;
+  openRow.classList.remove('is-open');
+  openCell.textContent = 'Rejected';
+  note.textContent = 'Rejected. The agent redrafts from your records before tonight\u2019s close.';
+  actions.hidden = true;
+});
+</script>
+</body>
+</html>
